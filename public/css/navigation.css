@@ -1,0 +1,292 @@
+/* VERSIONS
+/* 1_0: Primary Site Navigations
+----------------------------------------------------------------------------- */
+
+/* 
+-----------------------------------------------------------------------------
+ =NAVIGATION
+----------------------------------------------------------------------------- */
+
+/* Default Navigation - Primarily used for navigation in #content 
+----------------------------------------------------------------------------- */
+.nav{}
+	.nav ul{ margin: 0; padding: 0; list-style: none; }
+		.nav ul li ul{ display: none; }
+			.nav ul li ul li.lock{ background: url(../images/common/icon_lock.gif) center right no-repeat; }
+			.nav ul li ul li.hover ul,
+			.nav ul li ul li:hover ul,
+			.nav ul li ul li ul *,
+			.nav ul li ul li ul { display: none; }
+			.nav ul li.showall.open ul li ul *,
+			.nav ul li.showall.open ul li ul { display: block !important; }
+					
+.content .nav{
+	font-size: 100%;
+	line-height: 1.8em;
+	margin-bottom: 1.8em;
+	}
+	.content .nav h2{ font-size: 120%; }
+	.content .nav ul{}
+		.content .nav ul li{}
+			.content .nav ul li a{}
+			.content .nav ul li ul{}
+				.content .nav ul li ul li{}
+					.content .nav ul li ul li a{}
+
+/* Nav-main
+----------------------------------------------------------------------------- */
+#nav-main {
+	line-height: 1.0em;
+	z-index: 100;
+	font-size: 1.2em;
+	position: absolute;
+	margin: 0 0 0 319px;
+	}
+	#nav-main ul {
+		height: 35px;
+		list-style: none;
+		margin: 0 0 0 0px;
+		/*Set background image here the same as what you want for #nav-main ul li{}*/
+		}
+		#nav-main ul li {
+			position: relative;
+			float: left;
+			margin: 0;
+			padding: 0;
+			}
+			#nav-main ul li a {
+				display: block;
+				height: 67px;
+				text-indent: -3000px;
+				text-decoration: none;
+				}
+
+			#nav-link-home { background: url(../images/nav/main-home.gif) left top no-repeat; width: 76px;}
+			#nav-link-about { background: url(../images/nav/main-about.gif) left top no-repeat; width: 85px;}
+			#nav-link-seminars { background: url(../images/nav/main-seminars.gif) left top no-repeat; width: 121px;}
+			#nav-link-publications { background: url(../images/nav/main-publications.gif) left top no-repeat; width: 150px;}
+			#nav-link-news_and_initiatives { background: url(../images/nav/main-news.gif) left top no-repeat; width: 221px;}
+			#nav-main ul li a.active,
+			#nav-main ul li a:hover{ background-position: 0 -67px;}
+			#nav-main ul li ul {
+				height: auto;
+				width: 190px;
+				position: absolute;
+				z-index: 200;
+				background-image: none;
+				background-color: #DDD;
+				opacity: 0.9;
+				-moz-opacity: 90%;
+				filter: alpha(opacity=90);
+				}
+			#nav-main ul li.hover ul,
+			#nav-main ul li:hover ul {
+				display: block;
+				}
+				#nav-main ul li ul li {
+					float: none;
+					width: 180px;
+					margin: 0.5em;
+					}
+					#nav-main ul li ul li a {
+						position: relative;
+						left: 0;
+						height: auto;
+						text-indent: 0;	
+						}
+
+/* 
+-----------------------------------------------------------------------------
+ =NAV-CONST
+----------------------------------------------------------------------------- */
+#nav-const {
+	line-height: 1.0em;
+    z-index: 100;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	}
+	#nav-const ul {
+		height: 18px;
+		/*Set background image here the same as what you want for #nav-const ul li{}*/
+		}
+		#nav-const ul li {
+			position: relative;
+			float: left;
+			margin: 0 12px 0 0;
+			}
+			#nav-const ul li a {
+				display: block;
+				/*height: 18px;
+				text-indent: -3000px;
+				text-decoration: none;*/
+				}
+
+			/* Use favelets to generate this: http://schoolsuite.silverpoint.net/prodmisc/favelets.aspx	*/
+
+			#nav-const ul li ul {
+				height: auto;
+				width: 190px;
+				position: absolute;
+				z-index: 200;
+				background-image: none;
+				background-color: #DDD;
+				opacity: 0.9;
+				-moz-opacity: 90%;
+				filter: alpha(opacity=90);
+				}
+				#nav-const ul li.hover ul,
+				#nav-const ul li:hover ul {
+					display: block;
+					}
+					#nav-const ul li ul li {
+						float: none;
+						width: 150px;
+						margin: 0.5em;
+						}
+						#nav-const ul li ul li a {
+							position: relative;
+							left: 0;
+							height: auto;
+							text-indent: 0;
+							}
+
+/* 
+-----------------------------------------------------------------------------
+ =NAV-SUB
+--------------------------------------------------------------------------- */
+#nav-sub { background-color: #F5EFE3; }
+	#nav-sub ul {
+		}
+		#nav-sub ul li {
+    		background-image: none;
+		    }
+		#nav-sub ul li.lock{ background: url(../images/common/icon_lock.gif) center right no-repeat; }
+		    #nav-sub ul li a {
+		    	display: block;
+		        }
+		    #nav-sub ul ul {
+			    margin: 0 0 0 12px;
+			    }
+		    #nav-sub li.more ul,
+		    #nav-sub li li.more ul,
+		    #nav-sub li li li.more ul { 
+			    display: none;
+			    }
+		    #nav-sub li.active ul,
+		    #nav-sub li.open ul,
+		    #nav-sub li li.active ul,
+		    #nav-sub li li.open ul,
+		    #nav-sub li li li.active ul,
+		    #nav-sub li li li.open ul {
+			    display: block;
+			    }
+		    #nav-sub li.open a,
+		    #nav-sub li li.open a,
+		    #nav-sub li li li.open a {
+			    background-color: #DDD;
+			    }
+		    #nav-sub li.open * a,
+		    #nav-sub li li.open * a,
+		    #nav-sub li li li.open * a {
+			    background-color: transparent;
+			    }
+		    #nav-sub li.active a,
+		    #nav-sub li li.active a,
+		    #nav-sub li li li.active a {
+			    font-weight: bold;
+			    }
+		    #nav-sub li.active * a,
+		    #nav-sub li li.active * a,
+		    #nav-sub li li li.active * a { 
+			    font-weight: normal;
+			    }
+			/* 100519_Corbin added showing subnav 4th/5th tier back in */
+			#nav-sub ul li ul li ul *,
+			#nav-sub ul li ul li ul { display: block; }
+		
+/* 
+-----------------------------------------------------------------------------
+ =NAV-UTIL
+----------------------------------------------------------------------------- */
+#nav-util {
+	font-size: 1.1em;
+	line-height: 1.0em;
+    z-index: 100;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	}
+	#nav-util ul {
+		height: 18px;
+		}
+		#nav-util ul li {
+			position: relative;
+			float: left;
+			margin: 0 12px 0 0;
+			}
+			#nav-util ul li.lock{ background: url(../images/common/icon_lock.gif) center right no-repeat; }
+			#nav-util ul li a {
+				/* display: block;
+				height: 18px;
+				text-indent: -3000px;
+				text-decoration: none; */
+				}
+			#nav-util ul li ul {
+				display: none;
+				height: auto;
+				width: 190px;
+				position: absolute;
+				z-index: 200;
+				background-color: #DDD;
+				opacity: 0.9;
+				-moz-opacity: 90%;
+				filter: alpha(opacity=90);
+				}
+				/*	Don't want dropdowns in util nav
+				.nav-util ul li.hover ul,
+				.nav-util ul li:hover ul {
+					display: block;
+					}
+				.nav-util ul li ul li {
+					float: none;
+					width: 180px;
+					margin: 0.5em;
+					}
+				.nav-util ul li ul li a {
+					position: relative;
+					left: 0;
+					height: auto;
+					text-indent: 0;	
+					}*/
+
+/* 
+-----------------------------------------------------------------------------
+ =BREADCRUMBS
+----------------------------------------------------------------------------- */
+
+#breadcrumbs {
+	z-index: 90;
+	clear: both;
+	height: 1.5em;
+	font-size: 90%;
+	padding: 0;
+	margin-bottom: 1em;
+	}
+	#breadcrumbs ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		}
+		#breadcrumbs ul li {
+			float: left;
+			margin: 0 .5em 0 0;
+			padding: 0;
+			color: #000;
+			}
+		#breadcrumbs ul li.last-child { 
+			color: #000;
+			}
+			#breadcrumbs ul li a {
+				color: #333;
+				}

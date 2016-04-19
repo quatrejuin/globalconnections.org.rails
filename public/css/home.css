@@ -1,0 +1,49 @@
+/* Homepage stylesheet to override styles and do special treatments */
+
+body.layout-n0-p1-s1 #primary-content {
+	width: 954px;
+	margin: 0;
+	padding: 7px 7px 0;
+	height: 350px;
+	min-height: 350px;
+	}
+body.layout-n0-p1-s1 #secondary-content {
+	clear: both;
+	width: 954px;
+	margin: 0;
+	padding: 0px 7px 0;
+	min-height: 240px;
+	}
+#content{ background: none;}
+.leftside{ 
+	margin: 0px 0px 0 10px;
+	width: 465px;
+	float: left;
+}
+.address{ color: #5c5d5c;
+	font-size: 12px;
+	vertical-align: bottom;
+	margin-top: 20px;
+	margin-left: 4px;
+}
+
+.rightside{ padding-left: 23px;
+	border-left: 1px solid #e1e9ea;
+	margin: 0px 0px 0 23px;
+	width: 416px;
+	float: left;
+}
+
+address{ display: none;}
+
+#footer-container {	background: url(../images/common/footer_home.png) center top no-repeat;}
+
+#footer #contactinfo{
+	text-align: center;
+	width: 600px;
+	margin-left: 0;
+	width: 976px;
+	 padding: 61px 0px 0 0;
+}
+#footer #contactinfo ul{ margin: 0;}
+#footer #contactinfo p{ margin-bottom: 5px; }

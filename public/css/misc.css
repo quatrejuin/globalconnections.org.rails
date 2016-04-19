@@ -1,0 +1,97 @@
+/* VERSIONS
+   1_0: General Misc Styles
+   1_1: Added disabled, none, new icons [Author: Landon Durnan]
+   1_2: Added css definitions for "dd.facebook-profile a.url", which is used by
+        the Directory List and Directory Profile web parts. [Kevin Albrecht]
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+ =Misc.
+----------------------------------------------------------------------------- */
+.sc { overflow: hidden; }
+.button,
+.disabled{ 
+	background-color: #E4DED2;
+	border: 1px solid #999;
+	color: #000 !important; 
+	font: 11px normal Tahoma, Arial, Helvetica, sans-serif;
+	padding: 1px 3px; 
+	text-decoration: none;
+	}
+.button:hover{ 
+	background-color: #c9c9c9; 
+	color: #000 !important; 
+	text-decoration: none;
+	}
+.disabled{ background-color: #ccc; display: block; cursor: pointer; }
+
+	
+/* 
+-----------------------------------------------------------------------------
+ =Icons
+----------------------------------------------------------------------------- */
+a.file, a.img, a.pdf, a.doc, a.xls, a.ppt, a.txt, a.aud, a.vid, a.form,
+a.email, span.phone, span.fax, a.print, 
+a.ext, a.int, a.back, a.lock, a.unlock,  
+a.rss, a.ical, a.ext-FacebookProfile, a.ext-twitter, a.ext-linkedin, a.ext-flickr, a.ext-youtube, 
+span.cc-visa, span.cc-mc, span.cc-amex, span.cc-discover, span.cc-diners, span.cc-cash,
+dd.facebook-profile a.url {
+	padding: 2px 0 2px 24px;
+	background: url(../images/common/icon_default.gif) left top no-repeat;
+	}
+
+a.img	{ background-image: url(../images/common/icon_image.gif); }
+a.pdf	{ background-image: url(../images/common/icon_pdf.gif); }
+a.doc	{ background-image: url(../images/common/icon_doc.gif); }
+a.xls	{ background-image: url(../images/common/icon_xls.gif); }
+a.ppt	{ background-image: url(../images/common/icon_ppt.gif); }
+a.txt	{ background-image: url(../images/common/icon_txt.gif); }
+a.aud	{ background-image: url(../images/common/icon_audio.gif); }
+a.vid	{ background-image: url(../images/common/icon_video.gif); }
+a.form	{ background-image: url(../images/common/icon_form.gif); }
+
+a.email	{ background-image: url(../images/common/icon_email.gif); padding-left: 20px; }
+span.phone	{ background-image: url(../images/common/icon_phone.gif); padding-left: 20px; }
+span.fax	{ background-image: url(../images/common/icon_fax.gif); padding-left: 20px; }
+a.print { background-image: url(../images/common/icon_print.gif); padding-left: 22px; }
+
+a.ext	{ background-image: url(../images/common/icon_ext.gif); padding-left: 14px; }
+a.int	{ background-image: url(../images/common/icon_int.gif); padding-left: 14px; }
+a.back	{ background-image: url(../images/common/icon_back.gif); padding-left: 14px; }
+a.lock	{ background-image: url(../images/common/icon_lock.gif); padding-left: 14px; }
+a.unlock	{ background-image: url(../images/common/icon_unlock.gif); padding-left: 14px; }
+
+a.rss	{ background-image: url(../images/common/icon_rss.gif); padding-left: 20px; }
+a.ical	{ background-image: url(../images/common/icon_ical.gif); padding-left: 20px; }
+a.ext-FacebookProfile, dd.facebook-profile a.url {
+    background-image: url(../images/common/icon_facebook.gif); padding-left: 20px;
+    }
+a.ext-twitter	{ background-image: url(../images/common/icon_twitter.gif); padding-left: 20px; }
+a.ext-linkedin	{ background-image: url(../images/common/icon_linkedin.gif); padding-left: 20px; }
+a.ext-flickr	{ background-image: url(../images/common/icon_flickr.gif); padding-left: 20px; }
+a.ext-youtube	{ background-image: url(../images/common/icon_youtube.gif); padding-left: 20px; }
+
+span.cc-visa	{ background-image: url(../images/common/icon_cc_visa.gif); padding-left: 22px; }
+span.cc-mc	{ background-image: url(../images/common/icon_cc_mc.gif); padding-left: 22px; }
+span.cc-amex	{ background-image: url(../images/common/icon_cc_amex.gif); padding-left: 22px; }
+span.cc-discover	{ background-image: url(../images/common/icon_cc_discover.gif); padding-left: 22px; }
+span.cc-diners	{ background-image: url(../images/common/icon_cc_diners.gif); padding-left: 22px; }
+span.cc-cash	{ background-image: url(../images/common/icon_cc_cash.gif); padding-left: 22px; }
+
+/* 
+-----------------------------------------------------------------------------
+ =General Utilities
+----------------------------------------------------------------------------- */
+.hidden	{ position: absolute; left: -3000px;}
+.none	{ display: none; }
+.production-note { color: #F00; } /*Production Note*/
+.production-warn { color: #F00; } /*Production Warning*/
+.wiki-note { border: 1px solid #999999; color: #990000; padding: 5px; } /*Reference Site Note*/
+.clear { float: none; clear: both; }
+/* Disables dropdowns in browsers that can't support them over flash */
+.prevent-overlap #nav-main ul li.hover ul,
+.prevent-overlap #nav-main ul li:hover ul {
+	display: none;
+	}
+	
+#login #loginForm table td { padding: 4px; }	

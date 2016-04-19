@@ -1,0 +1,489 @@
+/* VERSIONS
+/* 4_5: Initial css version, with most recent production improvements
+/* 4_6: Added base css for Discussion Boards
+/* 4_7: Updated notes and discussion styling, also added Image Form
+/* 5_0: Updated notes styles to reflect new css standards and added all note forms [TODO: Discussions] [Author: Corbin Bentley]
+/* 5_1: Updated discussion styles to reflect new css standards and added all discussion forms [Author: Corbin Bentley]
+
+/* NOTES STYLES
+********************************************************************************/
+
+/* 
+-----------------------------------------------------------------------------
+ =NoteList
+----------------------------------------------------------------------------- */
+ul.note-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+    }   
+    ul.note-list li {
+        margin: 0;
+        padding: .5em 0;
+        border-bottom: 1px solid #cccccc;
+        list-style: none;
+        list-style-image: none;
+        }
+    ul.note-list li:after {
+        content: "."; 
+        display: block; 
+        height: 0; 
+        clear: both; 
+        visibility: hidden;
+        }
+    ul.note-list li.alt { }    
+        ul.note-list li h4 { }
+            ul.note-list li h4 a { }
+                ul.note-list li h4 a span { }   
+        ul.note-list li h5 { }
+            ul.note-list li h5 a { }
+                ul.note-list li h5 a span { }   
+        ul.note-list li h6 {
+            font-size: 10px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            }
+        ul.note-list li p { }
+        ul.note-list li div.thumb { }    
+            ul.note-list li div.thumb a { }    
+                ul.note-list li div.thumb a img { }    
+        ul.note-list li span { }
+            ul.note-list li span a.edit { }
+            ul.note-list li span a.delete { }
+                
+/* 
+-----------------------------------------------------------------------------
+ =General NoteList
+----------------------------------------------------------------------------- */
+.notelist  { }
+    .notelist ul.note-list { }   
+        .notelist ul.note-list li { }
+        .notelist ul.note-list li:after { }
+        .notelist ul.note-list li.alt { }    
+            .notelist ul.note-list li h4 { }
+                .notelist ul.note-list li h4 a { }
+                    .notelist ul.note-list li h4 a span { }   
+            .notelist ul.note-list li h5 { }
+                .notelist ul.note-list li h5 a { }
+                    .notelist ul.note-list li h5 a span { }   
+            .notelist ul.note-list li h6 { }
+            .notelist ul.note-list li p { }
+            .notelist ul.note-list li div.thumb { }    
+                .notelist ul.note-list li div.thumb a { }    
+                    .notelist ul.note-list li div.thumb a img { }    
+            .notelist ul.note-list li span { }
+                .notelist ul.note-list li span a.edit { }
+                .notelist ul.note-list li span a.delete { }
+
+/* 
+-----------------------------------------------------------------------------
+ =ClassNotes NoteList
+----------------------------------------------------------------------------- */
+.classnotes  { }
+    .classnotes ul.note-list { }   
+        .classnotes ul.note-list li { }
+        .classnotes ul.note-list li:after { }
+        .classnotes ul.note-list li.alt { }    
+            .classnotes ul.note-list li h4 { }
+                .classnotes ul.note-list li h4 a { }
+                    .classnotes ul.note-list li h4 a span { }   
+            .classnotes ul.note-list li h5 { }
+                .classnotes ul.note-list li h5 a { }
+                    .classnotes ul.note-list li h5 a span { }   
+            .classnotes ul.note-list li h6 { }
+            .classnotes ul.note-list li p { }
+            .classnotes ul.note-list li div.thumb { }    
+                .classnotes ul.note-list li div.thumb a { }    
+                    .classnotes ul.note-list li div.thumb a img { }    
+            .classnotes ul.note-list li span { }
+                .classnotes ul.note-list li span a.edit { }
+                .classnotes ul.note-list li span a.delete { }
+                
+/* 
+-----------------------------------------------------------------------------
+ =Recent NoteList
+----------------------------------------------------------------------------- */
+.recentnotes  { }
+    .recentnotes ul.note-list { }   
+        .recentnotes ul.note-list li { }
+        .recentnotes ul.note-list li:after { }
+        .recentnotes ul.note-list li.alt { }    
+            .recentnotes ul.note-list li h4 { }
+                .recentnotes ul.note-list li h4 a { }
+                    .recentnotes ul.note-list li h4 a span { }   
+            .recentnotes ul.note-list li h5 { }
+                .recentnotes ul.note-list li h5 a { }
+                    .recentnotes ul.note-list li h5 a span { }   
+            .recentnotes ul.note-list li h6 { }
+            .recentnotes ul.note-list li p { }
+            .recentnotes ul.note-list li div.thumb { }    
+                .recentnotes ul.note-list li div.thumb a { }    
+                    .recentnotes ul.note-list li div.thumb a img { }    
+            .recentnotes ul.note-list li span { }
+                .recentnotes ul.note-list li span a.edit { }
+                .recentnotes ul.note-list li span a.delete { }
+                                                
+/* 
+-----------------------------------------------------------------------------
+ =Blog NoteList
+----------------------------------------------------------------------------- */
+.comments  { }
+    .comments ul.note-list { }   
+        .comments ul.note-list li { }
+        .comments ul.note-list li:after { }
+        .comments ul.note-list li.alt { }    
+            .comments ul.note-list li h4 { }
+                .comments ul.note-list li h4 a { }
+                    .comments ul.note-list li h4 a span { }   
+            .comments ul.note-list li h5 { }
+                .comments ul.note-list li h5 a { }
+                    .comments ul.note-list li h5 a span { }   
+            .comments ul.note-list li h6 { }
+            .comments ul.note-list li p { }
+            .comments ul.note-list li div.thumb { }    
+                .comments ul.note-list li div.thumb a { }    
+                    .comments ul.note-list li div.thumb a img { }    
+            .comments ul.note-list li span { }
+                .comments ul.note-list li span a.edit { }
+                .comments ul.note-list li span a.delete { }
+	        
+/* 
+-----------------------------------------------------------------------------
+ =New/Edit Note Form
+----------------------------------------------------------------------------- */
+.noteform { }
+    .noteform label { }
+        .noteform label span {
+            display: block;
+            }
+            .noteform label span input { }
+            .noteform label span select { }        
+            .noteform label span textarea { }        
+    .noteform input#submit {
+        margin-top: 5px;
+        }        
+
+/* 
+-----------------------------------------------------------------------------
+ =Search Note Form
+----------------------------------------------------------------------------- */
+.searchform { }
+    .searchform label { }
+        .searchform label span {
+            display: block;
+            }
+            .searchform label span input { }
+            .searchform label span select { }        
+            .searchform label span textarea { }        
+    .searchform input#submit {
+        margin-top: 5px;
+        }  
+    .searchform input#clear {
+        margin-top: 5px;
+        }  
+    
+/* 
+-----------------------------------------------------------------------------
+ =Attachments Form
+----------------------------------------------------------------------------- */
+.imageform { }
+    .imageform p { }
+    .imageform label { }
+        .imageform label span {
+            display: block;
+            }
+        .imageform label span input { }    
+        .imageform label span input.Input { }    
+    .imageform input.button {
+        margin-top: 5px;
+        }
+	
+
+/* DISCUSSION STYLES
+********************************************************************************/
+
+/* 
+-----------------------------------------------------------------------------
+ =General Styles
+----------------------------------------------------------------------------- */	
+.discussions { }
+    .discussions h2 { }
+    .discussions .module-header {
+	    position: relative;
+	    font-weight: bold;
+	    background-color: #E0E0E0; 
+	    border-top: 1px solid #CCCCCC; 
+	    border-bottom: 1px solid #CCCCCC; 
+	    padding: 3px 5px;
+	    line-height: 13px;
+	    }
+        .discussions .module-header h2 { }
+        .discussions .module-header span {
+	        font-size: .92em;
+	        margin: 5px 0;
+	        padding: 0;
+	        }
+        .discussions .module-header span.col2 {
+	        position: absolute;
+	        top: 3px;
+	        right: 10px;
+	        margin: 0;
+	        }	
+    .discussions .module-footer {
+	    position: relative;
+	    border-top: 1px dotted #999999;
+	    border-bottom: 1px dotted #999999;
+	    padding: 5px 10px;
+	    line-height: 15px;
+	    }
+    .discussions .module-footer:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        }
+        .discussions .module-footer a, 
+        .discussions .module-footer a.more, 
+        .discussions .module-footer a.edit { }
+        .discussions .module-footer a.right {
+	        position: absolute;
+	        top: 5px;
+	        right: 10px;
+            }	
+        .discussions .module-footer a.home {
+	        position: absolute;
+	        left: 110px; 
+	        top: 2px; 
+	        }
+    .discussions ul {
+        list-style: none;
+        list-style-image: none;
+        padding: 0;
+        margin: 0;
+        }	
+    .discussions .notes {
+	    padding: 0;
+	    margin: 1px 0 0 0;
+	    }
+        .discussions .notes li { }
+        .discussions .notes li:after {
+            content: "."; 
+            display: block; 
+            height: 0; 
+            clear: both; 
+            visibility: hidden;
+            }
+
+/* 
+-----------------------------------------------------------------------------
+ =Thread View
+----------------------------------------------------------------------------- */	
+.thread-view { }
+    .thread-view .notes {
+	    margin: 0; 
+	    padding: 0; 
+	    }
+        .thread-view .notes li {
+	        padding: .5em 2px;
+	        margin: 0 2px;
+	        border-top: 1px solid #cccccc;
+	        }
+        .thread-view .notes li.first-child {
+	        padding-top: 0.5em; 
+	        border-top: 0;
+	        }
+        .thread-view .notes li.alt {
+            background-color: #E8EFF1;
+	        }
+            .thread-view .notes h3 {
+	            padding: 0;
+	            margin: 0;
+	            font-weight: normal;
+	            font-size: 1.1em !important;
+	            }
+            .thread-view .notes h4 {
+	            float: none;
+	            clear: both;
+	            display: block;
+	            padding: 0;
+	            margin: 0;
+	            font-weight: normal;
+	            font-size: .91em;
+	            }
+            .thread-view .notes h5 {
+	            float: right;
+	            clear: right;
+	            display: block;
+	            padding: 0;
+	            margin: 0;
+	            font-weight: normal;
+	            font-size: .92em;
+	            }
+            .thread-view .notes h6 {
+	            float: right;
+	            clear: right;
+	            display: block;
+	            padding: 0;
+	            margin: 0;
+	            font-weight: normal;
+	            }
+                .thread-view .notes h6 a {
+	                font-size: .92em;
+	                padding: 0;
+	                margin: 0;
+	                }
+            .thread-view .notes p {
+	            display: block;
+	            margin: 0;
+	            }
+            .thread-view .notes a.url {
+	            padding: 0;
+	            margin: 0;
+	            }
+
+/* 
+-----------------------------------------------------------------------------
+ =List View
+----------------------------------------------------------------------------- */	
+.list-view { }
+    .list-view h3 { }
+    .list-view .notes {
+	    padding: 0;
+	    margin: 0;
+	    }
+        .list-view .notes li {
+	        padding: 0;
+	        margin: 0;
+	        }
+            .list-view .notes ul { margin-left: 20px; }
+            .list-view .notes li .bb-note-body {
+	            margin: 10px 0;
+	            padding: 0;
+	            }
+            .list-view .notes li .alt {
+                background-color: #E8EFF1;
+                }
+                .list-view .notes h3 {
+	                margin: 0 0 2px 0;
+	                padding: 0;
+	                font-weight: normal;
+	                font-size: 1em;
+	                }
+                .list-view .notes h4 { }
+                .list-view .notes h5 {
+	                float: right;
+	                clear: right;
+	                display: block;
+	                padding: 0;
+	                margin: 0;
+	                font-weight: normal;
+	                font-size: .92em;
+	                color: #828282;
+	                }
+                .list-view .notes h6 {
+	                float: right;
+	                clear: right;
+	                display: block;
+	                padding: 0;
+	                margin: 0;
+	                font-weight: normal;
+	                }
+                    .list-view .notes h6 a {
+	                    font-size: .92em;
+	                    padding: 0;
+	                    margin: 0;
+	                    }
+                .list-view .notes p {
+	                display: block;
+	                margin: 0;
+	                line-height: 1.2em;
+	                }
+	            .list-view .notes a.url {
+	                margin: 0;
+	                }
+
+/* 
+-----------------------------------------------------------------------------
+ =Single View
+----------------------------------------------------------------------------- */	
+.single-view { }
+    .single-view .notes {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    }
+        .single-view .notes li {
+	        list-style: none;
+	        list-style-image: none;
+	        padding: 0 0 10px 0;
+	        margin: 0;
+	        }
+            .single-view .notes h4 { }
+            .single-view .notes ul { }
+                .single-view .notes .bb-note-body {
+	                margin: 0;
+	                padding: 5px 0;
+	                }
+                    .single-view .notes h3 {
+	                    margin: 0;
+	                    padding: 2px 0;
+	                    font-weight: normal;
+	                    font-size: 1em;
+	                    }
+                    .single-view .notes h5 {
+	                    /*float: none;
+	                    clear: both;*/
+	                    display: block;
+	                    padding: 0;
+	                    margin: 0 0 10px 0;
+	                    font-weight: normal;
+	                    font-size: .92em;
+	                    }
+                    .single-view .notes h6 {
+	                    float: right;
+	                    clear: right;
+	                    display: block;
+	                    padding: 0;
+	                    margin: 10px 10px 0 0;
+	                    font-weight: normal;
+	                    }
+                        .single-view .notes h6 a {
+	                        font-size: .92em;
+	                        padding: 0;
+	                        margin: 0;
+	                        }
+                    .single-view .notes p {
+	                    display: block;
+	                    margin: 0 0 10px 0;
+                    	margin-right: 110px; 
+	                    }
+                    .single-view .notes a.url {
+	                    margin: 0;
+                    	padding: 0;  
+	                    }
+
+/* 
+-----------------------------------------------------------------------------
+ =Forms
+----------------------------------------------------------------------------- */	
+.form-view { }
+    .form-view #noteForm { }
+        .form-view #noteForm strong { }
+        .form-view #noteForm h4 { }
+        .form-view #noteForm input { }
+        .form-view #noteForm textarea { }
+        .form-view #noteForm #submit { }
+
+    .form-view #FileEditForm { }
+        .form-view #FileEditForm label { 
+	        display: block;
+	        margin-bottom: 5px;
+	        }
+        .form-view #FileEditForm label span { 
+	        margin-left: 10px;
+	        }
+            .form-view #FileEditForm label span input { }
+            .form-view #FileEditForm label span textarea { }

@@ -1,0 +1,272 @@
+/* VERSIONS
+/* 1_0: General HTML Styles (inc. Lists, Tables, Images, Modules, Forms, Tabs)
+/* 1_1: Changed default styles for Lists [Author: Landon Durnan]
+/* 1_2: Changed headings, moved module style and SC styles, block image widths [Author: Landon Durnan]
+/* 1_3: Changed default styles for Tabs [Author: Nick Hall]
+----------------------------------------------------------------------------- */
+
+/* 
+-----------------------------------------------------------------------------
+ =HTML Styles
+----------------------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6{ font-weight:  bold; }
+h1,h2,h3{ margin-bottom: 1em; }
+h1 { font-size: 26px; line-height: 1em; text-transform: uppercase; color: #306679;}
+h2 { font-size: 18px; line-height: 1em; text-transform: uppercase; color: #7fa837;}
+h3 { font-size: 16px; color: #7fa837;}
+h4 { font-size: 14px; font-weight: bold; color: #395e6a; }
+h5 { font-size: 1em; color: #395e6a; }
+h6 { font-size: 1em; color: #395e6a; }
+
+.sc h3, .tc h3 { font-size: 1.3em;}
+.sc h5, .tc h5 { font-size: 1em;}
+.sc h6, .tc h6 { font-size: 1em;}
+	.tc h2.section { }
+
+a:link { color: #395E6A; font-weight: bold; text-decoration: none;}
+a:visited { color: #395E6A; }
+a:hover { color: #CC3333; }
+a:active, a:focus { color: #000000; text-decoration: underline; }
+
+.pc blockquote, 
+.sc blockquote {
+ 	color: #9dbc67;
+	margin-bottom: 1.5em;
+	font-size: 27px;
+	}
+.sc blockquote {}
+.pc blockquote p, 
+.sc blockquote p{ margin-bottom: .5em; }
+blockquote cite {
+	font-style: normal;
+	display: block;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 18px;
+	}
+.pc blockquote.callout,
+.sc blockquote.callout {}
+.lead-in {
+	font-size: 125%;
+	}
+.dropcap {
+    font-size: 300%;
+	float: left;
+	color: #395e6a;
+	line-height: 1em;
+	margin: 0 .15em 0 0;
+    }
+
+/* 
+-----------------------------------------------------------------------------
+ =Lists
+----------------------------------------------------------------------------- */
+
+ul { list-style: none; margin: 4px 0 1.8em 6px; }
+ol { list-style: outside decimal; margin: 0 0 1.8em 1.8em; }
+	ul ul, ol ol{ margin-bottom: 0; }
+	
+.pc ul li,
+.sc ul li {background: url(../images/common/bullet.gif) left 8px no-repeat; padding-left: 8px; margin-bottom: 4px; }	
+.sc ul { line-height: 1.4em; }
+
+.pc ol { }
+.sc ol { line-height: 1.4em; }
+
+.pc ul ul, .sc ul ul, 
+.pc ol ul, .sc ol ul { }
+
+ul.plain{}
+ol.plain{}
+
+/* 
+-----------------------------------------------------------------------------
+ =Tables
+----------------------------------------------------------------------------- */
+
+table.styled {
+	border-top: 1px solid #c0d8e0;  
+	border-left: 1px solid #c0d8e0; 
+	margin-bottom: 1.8em; 
+	width: 100%;	
+	border-collapse: collapse;
+	border-bottom: 1px solid #c0d8e0;
+	}
+    table.styled tr {
+	    }
+	    table.styled th {
+	        border-bottom: 1px solid #c0d8e0;
+	        border-right: 1px solid #c0d8e0; 
+	        font-weight: bold;
+	        padding: .4em;	
+			color: #b22861;
+			background: #a0bdc0;
+            }
+        table.styled td {
+	        border-top: 1px solid #c0d8e0;
+	        border-bottom: 1px solid #c0d8e0; 
+	        border-right: 1px solid #c0d8e0;	
+	        padding: .4em;
+	        }	
+        table.styled tr.alt td {
+	        background-color: #e5efd3;
+	        }
+
+.sc table.styled { width: 95%; margin: 0 5px 1.8em;}
+
+/* 
+-----------------------------------------------------------------------------
+ =Images
+----------------------------------------------------------------------------- */
+
+.image { margin-bottom: .2em; }
+	.image dt { 
+		border: 3px solid #567a86;
+		}
+		.image dt img { 
+			display: block;
+			}
+	.image dd { 
+		padding: 8px 2px; 
+		font-size: 13px;
+		line-height: normal;
+		color: #567a86;  
+		border-bottom: 1px solid #c0d8e0;
+		}
+
+/* Do a simplified style based on .image dt */
+.thumb{ 
+	background-color: #fff;
+	border: 1px solid #BFBAB0;
+	padding: 3px;
+	} 
+	.thumb a{ display: block; }
+	
+/* image + padding + borders */
+.block1{ width: 236px; }  
+.block2  ,
+.block3,
+.block4 { width: 347px; } 
+.block5 { width: 530px; } 
+
+.sc .image{ margin-bottom: 20px;}
+
+.wide { float: none; margin: 0 0 .8em 0; }
+.left { float: left; margin: 0 .8em .8em 0; }
+.right { float: right; margin: 0 0 .8em .8em; }
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Forms
+----------------------------------------------------------------------------- */
+
+fieldset { border: 1px solid #ccc; }
+legend { background: #fff; }
+textarea, input[type='text'], input[type='password'], select { border: 1px solid #ccc; background: #fff; }
+textarea:hover, input[type='text']:hover, input[type='password']:hover, select:hover { border-color: #aaa; }
+textarea:focus, input[type='text']:focus, input[type='password']:focus, select:focus { border-color: #888; outline: 2px solid #ddd; }
+input[type='button'], input[type='submit'], input[type='checkbox'], input[type='image'], input[type='radio'], input[type='reset'], select, button { cursor: pointer; }
+input[type='hidden'] { display:none; }
+fieldset { padding: 0 1em 1em 1em; margin: 1.6em 0; } /* padding-top is margin-top for fieldsets in Opera */
+legend { padding-left: .8em; padding-right: .8em; }
+legend+* { margin-top: 1em; } /* compensates for the opera margin bug */
+textarea, input { padding: .3em .4em .15em .4em; }
+select { padding: .1em .2em 0 .2em; }
+option { padding: 0 .4em .1em; }
+
+/* 
+-----------------------------------------------------------------------------
+ =Tabs
+----------------------------------------------------------------------------- */
+.tab-row { clear: both;	}
+	.tab-row ul { 
+		list-style: none; 
+		margin: 1.0em 0 1.2em 0;
+		padding: 0 0 1px 2%;
+		float: left;
+		width: 98%;
+		background: url(../images/common/bg-tab-border.gif) repeat 0 0;
+		}
+		.tab-row ul li {
+			float: left;
+			margin: 0 3px 10px 0;
+			padding: 0;
+			white-space: nowrap;
+			background-image: none;
+			}
+		.tab-row ul li.label {
+			color: #666;
+			background-color: transparent;
+			border: none;
+			padding: 10px 6px 0 0;
+			}
+			.tab-row ul li a { 
+				display: block;
+				padding: 9px 10px 0 10px;
+				border: 1px solid #BDBDBD;
+				border-bottom: 0;
+				font-weight: normal;
+				text-decoration: none;
+				outline: none;
+				color: #5f6b65;
+				height: 27px;
+				background-color: #EFEFEF; 
+				-webkit-border-top-left-radius: 4px;
+				-webkit-border-top-right-radius: 4px;
+				-moz-border-radius-topleft: 4px;
+				-moz-border-radius-topright: 4px;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				font-weight: bold;
+				}
+		.tab-row ul li.active { }
+			.tab-row ul li.active a,
+			.tab-row ul li a.selected { 
+				height: 28px;
+				background-color: #a0c0c0;
+				margin-bottom: -1px;
+				color: #e3d263;
+				text-shadow: 2px 2px 2px black;
+			}	
+#tab1, #tab2, #tab3, #tab4, #tab5, #tab6, #tab7, #tab8, #tab9, #tab10, #tab11, #tab12, #tab13, #tab14, #tab15{ padding: 0 20px;} 
+			
+dl.timeline {
+		clear: both; 
+		float: none; 
+		margin-bottom: 8px;	 
+		padding-bottom: 8px;	 
+		min-height: 30px;
+		border-bottom: 1px dotted #8c8c8c;
+}	
+dl.last-child {
+		border-bottom: none
+}
+dl.timeline:after {
+		content: "."; 
+		display: block; 
+		height: 0; 
+		clear: both; 
+		visibility: hidden;
+		}
+dl.timeline dt{ 
+	color: #395e6a;
+	font-size: 30px;
+	font-family: Garamond, Georgia, "Times New Roman", Times, serif;
+	float: left;
+	padding-top: 4px;
+}
+dl.timeline dd {
+			margin: 0 0 0.4em 65px; 
+			padding: 0 0 0.4em 10px; 
+			border-left: 1px solid #c0d8e0;
+}
+			
+dl.timeline a.readmore {
+				padding-right: 14px;
+				display: inline; 
+				font-size: 12px;
+				color: #395e6a; 
+				text-transform: uppercase;
+				background: url(../images/common/more.gif) right center no-repeat;}

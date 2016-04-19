@@ -1,0 +1,39 @@
+@import url("../../_infrastructure/css/module/gallery.css");
+
+/* VERSIONS
+/* 6_0: Module Framework Update - Check Shared CSS for default styles
+*******************************************************************************/
+
+.gallery .list .bd{}
+	.gallery .list .bd .images{}
+	.gallery .list .bd .images li{}
+		.gallery .list .bd .images p{}
+		.gallery .list .bd .images li .thumb{}
+			.gallery .list .bd .images li .thumb a{ }
+			.gallery .list .bd .images li .thumb a.file{}
+				.gallery .list .bd .images .thumb a img{}
+				.gallery .list .bd .images .thumb a span{}
+		.gallery .list .bd .images .caption{}
+		.gallery .list .bd .images .description{}
+		.gallery .list .bd .images .total{}
+
+	.gallery .list .bd dl.file{}
+	.gallery .list .bd dl.file dt{}
+	.gallery .list .bd dl.file ul{}
+		.gallery .list .bd dl.file ul li{}
+			.gallery .list .bd dl.file ul li a{}
+			.gallery .list .bd dl.file ul li p{}
+
+.gallery .grid .bd{}
+	.gallery .grid .bd .images{}
+	.gallery .grid .bd .images li{}
+		.gallery .grid .bd .images  p{}
+		.gallery .grid .bd .images li .thumb{}
+			.gallery .grid .bd .images li .thumb a{}
+			.gallery .grid .bd .images li .thumb a.file{}
+				.gallery .grid .bd .images li .thumb a img{}
+				.gallery .grid .bd .images li .thumb a span{}
+		.gallery .grid .bd .images .caption{ }
+		.gallery .grid .bd .images .description{ }
+		.gallery .grid .bd .images .total{}
+	.gallery .grid .bd .paging .button{}

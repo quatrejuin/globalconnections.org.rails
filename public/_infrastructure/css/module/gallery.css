@@ -1,0 +1,58 @@
+﻿.gallery{}
+.gallery .images li .thumb a.file { padding: 0; background: none; }
+	.gallery .images li .thumb a.file div{ min-height: 75px; min-width: 75px; text-indent: -9999px; background-position: center center; background-repeat: no-repeat; }
+	
+.gallery .images li .thumb a.file div{ background-image: url(../../images/icons/64x64/icon_default.gif); }
+.gallery .images li .thumb a.pdf div{ background-image: url(../../images/icons/64x64/icon_pdf.gif); }
+.gallery .images li .thumb a.doc div{ background-image: url(../../images/icons/64x64/icon_word.gif); }
+.gallery .images li .thumb a.txt div{ background-image: url(../../images/icons/64x64/icon_text.gif); }
+.gallery .images li .thumb a.xls div{ background-image: url(../../images/icons/64x64/icon_excel.gif); }
+.gallery .images li .thumb a.ppt div{ background-image: url(../../images/icons/64x64/icon_powerpoint.gif); }
+.gallery .images li .thumb a.aud div{ background-image: url(../../images/icons/64x64/icon_audio.gif); }
+.gallery .images li .thumb a.vid div{ background-image: url(../../images/icons/64x64/icon_video.gif); }
+.gallery .images li .thumb a.poster div{ background-image: url(../../images/button-play.png.html); position: absolute; top: 0; }
+
+	.gallery .list .bd{}
+		.gallery .list .bd .images{}
+		.gallery .list .bd .images li{ width: 100%; }
+			.gallery .list .bd .images p{ margin: 0; }
+			.gallery .list .bd .images li .thumb{ margin: 0 1em 0 0; float: left; }
+				.gallery .list .bd .images li .thumb a{ }
+					.gallery .list .bd .images .thumb a img{ }
+					.gallery .list .bd .images .thumb a span{ display: block; }
+			.gallery .list .bd .images .caption{}
+			.gallery .list .bd .images .description{}
+			.gallery .list .bd .images .total{}
+
+		.gallery .list .bd dl.file{ list-style: none; margin: 0 0 1em 0; padding: 0; }
+		.gallery .list .bd dl.file dt { }
+		.gallery .list .bd dl.file ul{ list-style: none; }
+			.gallery .list .bd dl.file ul li{ margin-bottom: 0; border: 0; padding: 0 0 .5em 0; }
+				.gallery .list .bd dl.file ul li a{ }
+				.gallery .list .bd dl.file ul li p{ margin: 0; }
+	
+	.gallery .grid .bd{}
+		.gallery .grid .bd .images{}
+		.gallery .grid .bd .images li{ display: block; float: left; position: relative; zoom: 1; }
+			.gallery .grid .bd .images p{ margin: 0; }
+		   .gallery .grid .bd .images li .thumb{ position: relative; margin: 0 0 .5em 0; zoom: 1; }
+				.gallery .grid .bd .images li .thumb a{ 
+					display: block; 
+					position: relative; 
+					overflow: hidden;
+					padding: 0;
+					}
+				.gallery .grid .bd .images li .thumb a.file{ padding: 0 !important; background-position: center center;}
+					.gallery .grid .bd .images li .thumb a img{ }
+					.gallery .grid .bd .images li .thumb a span{ display: block; text-indent: -9999px; }
+			
+			.gallery .grid .bd .images .caption{ }
+			.gallery .grid .bd .images .description{ }
+			.gallery .grid .bd .images .total{}
+		.gallery .grid .bd .paging .button{ margin: 0 .25em .5em; }
+
+/* File attachments */
+.attachments .file-list li .thumb a.poster { padding: 0; background: none; }
+	.attachments .file-list li .thumb a.poster div{ height: 75px; min-width: 75px; text-indent: -9999px; background-position: center center; background-repeat: no-repeat; }
+
+.attachments .file-list li .thumb a.poster div{ background-image: url(../../images/button-play.png.html); position: absolute; top: 0; }

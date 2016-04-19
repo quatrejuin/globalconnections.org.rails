@@ -1,0 +1,190 @@
+/* VERSIONS
+/* 4_5: Initial css version, with most recent production improvements
+/* 4_6: Added base faq and newsletter styles, and added Portal News styles (news list/portal news/homework)
+/* 4_7: Removed unused CSS, updated defaults [TO DO: Portal CSS] [Author: Landon Durnan]
+/* 5_0: Better defaults: news, detail, faqs [Author: Landon Durnan]
+/* 5_1: Moved FAQ and Barcharts to separate files [Author: Landon Durnan]
+
+/* NEWS STYLES
+********************************************************************************/
+
+/* 
+-----------------------------------------------------------------------------
+ =News-List
+----------------------------------------------------------------------------- */
+.news-list{ }
+	.news-list ul.news {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		}
+		.news-list ul.news li {
+			background: none;
+			margin-bottom: 1em;
+			padding-left: 0;
+			}
+    	.news-list ul.news li:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;	}
+		.news-list ul.news li * { margin: 0; padding: 0; }
+			
+			.news-list ul.news li h4{
+				font-size: 1.2em;
+				font-weight: bold;
+				}
+			.news-list ul.news li h5,
+			.news-list ul.news li h6 {
+				}
+			.news-list ul.news p{ display: inline;}
+			.news-list ul.news a.readmore {
+				padding-right: 14px;
+				display: inline; 
+				color: #395e6a; 
+				text-transform: uppercase;
+				background: url(../../images/common/more.gif) right center no-repeat;}
+			.news-list span.viewall a{
+				text-transform: uppercase;
+				float: right;
+				color: #395e6a; 
+				padding-right: 14px;
+				background: url(../../images/common/more.gif) right center no-repeat;
+				} 
+			.news-list ul.news .thumb { 
+				float: right; 
+				margin: 0 0 .8em .8em;
+				}
+				.news-list ul.news .thumb img{}
+			.news-list ul.news .thumb-file {}		
+	
+/* 
+-----------------------------------------------------------------------------
+ =News-Detail
+----------------------------------------------------------------------------- */
+.news-detail{}
+	.news-detail h1{ }
+	.news-detail h3{ }
+	.news-detail h4{ }
+	.news-detail p{ }
+	
+/* 
+-----------------------------------------------------------------------------
+ =Newsletter
+----------------------------------------------------------------------------- */	
+.newsletter ul.news { }
+	.newsletter ul.news li { }
+	.newsletter ul.news li.last-child {	}
+		.newsletter ul.news li h4{}
+		.newsletter ul.news li h5,
+		.newsletter ul.news li h6 {
+			}
+		.newsletter ul.news p{}
+		.newsletter ul.news a.readmore {}
+		.newsletter ul.news .thumb {}
+			.newsletter ul.news .thumb img{ }
+		.newsletter ul.news .thumb-file {}					
+.newsletter .content { display: none; }
+
+/* PORTAL NEWS STYLES
+*******************************************************************************
+
+PORTAL NEWS LIST
+----------------------------------------------------------------------------- */
+.portal-news-list ul.news {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+.portal-news-list ul.news li {
+	background: none;
+	padding: 0;
+	margin: 0;
+	}
+.portal-news-list ul.news li * {
+	margin: 0;
+	padding: 0;
+	}
+.portal-news-list ul li h4 {
+	display: inline;
+	font-size: .92em;
+	font-weight: normal;
+	padding-right: 0.4em;
+	padding-left: 10px;
+	}
+.portal-news-list ul li h5 {
+	display: inline;
+	font-size: 1em;
+	padding-right: 0.4em;
+	font-weight: normal;
+	}
+.portal-news-list ul li h6 {
+	display: inline;
+	font-size: 1em;
+	padding-right: 0.4em;
+	font-weight: normal;
+	color: #666; 
+	}
+.portal-news-list ul li .modulename { display: block; color: #666; font-size: .9em; }
+
+/* CLASS HOMEWORK
+----------------------------------------------------------------------------- */	
+.homework {
+	margin-bottom: 10px;
+	}
+.homework h2 {
+	font-size: 1.17em;
+	font-weight: bold;
+	margin: 5px 0;
+	padding: 0;
+	}
+.homework .module-header {
+	position: relative;
+	font-weight: bold;
+	background-color: #E0E0E0; 
+	border-top: 1px solid #CCCCCC; 
+	border-bottom: 1px solid #CCCCCC; 
+	padding: 3px 5px;
+	line-height: 13px;
+	}
+.homework .module-header h2 {
+	}
+.homework .module-header span {
+	font-size: .92em;
+	margin: 5px 0;
+	padding: 0;
+	}
+.homework .module-header span.col2 {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	margin: 0;
+	}
+.homework ul.news {
+	margin: 5px 0;
+	padding: 0;
+	list-style: none;
+	}
+.homework ul.news li {
+	background: none;
+	padding: 0;
+	margin: 0;
+	}
+.homework ul.news li h4 {
+	display: inline;
+	font-size: .92em;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+	padding-left: 10px;
+	}
+.homework ul.news li h4 span {
+	display: block;
+	color: #000;
+	}
+.homework ul.news li h5 {
+	float: right;
+	clear: right;
+	padding: 0;
+	margin: 4px 0 0 0;
+	}
+.homework ul.news li h6 {
+	display: block;
+	margin-left: 20px;
+	}

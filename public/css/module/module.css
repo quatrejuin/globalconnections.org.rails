@@ -1,0 +1,52 @@
+@import url("../../_infrastructure/css/module/module.css");
+
+/* VERSIONS
+/* 1_0: General Module Styles
+/* 2_0: Module Framework
+/* 3_0: Shared Code - Setup for list / grid styles
+----------------------------------------------------------------------------- 
+ =MODULE (Local)
+----------------------------------------------------------------------------- */
+.module{ margin: 0 0 10px; }
+.module .list{}
+	.module .list .bd ul{}
+		.module .list .bd ul li{
+			border-bottom: 1px solid #EFEFEF;
+			margin-bottom: .5em;
+			padding-bottom: .5em; 
+			}
+		
+	.module .list dl{}
+		.module .list dl dt{}
+		.module .list dl dd{}
+	
+.module .grid{}
+	.module .grid .bd ul{}
+	.module .grid .bd dl,
+		.module .grid .bd ul li{ margin: 0 1em 1em 0; }
+
+.sc .module,
+.tc .module{ }
+
+.sc .module{ }
+	.sc .module .hd h2{}
+
+.tc .module{}
+	.tc .module .hd h2{}
+	
+.module .hd .customize,
+.module .hd .edit{ position: absolute; right: 0; top: 0; }
+
+.check-links{ margin: 0 0 6px 0; }
+	.check-links a{ text-decoration: none;}
+	.check-links a:hover{ }
+	.check-links .check{ 
+		background: url(../../images/common/checkall.gif) 0 3px no-repeat; 
+		padding-left: 12px; 
+		margin-right: 10px;
+		}
+	.check-links .uncheck{ 
+		background: url(../../images/common/uncheckall.gif) 0 3px no-repeat; 
+		padding-left: 12px; 
+		}
+

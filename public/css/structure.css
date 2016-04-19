@@ -1,0 +1,250 @@
+/* VERSIONS
+/* 1_0: Primary Site Structure
+/* 1_1: Changed default colors and site width 
+/* 1_2: Updated to Sticky Footers, added tertiary-content [Author: Landon Durnan]
+----------------------------------------------------------------------------- */
+
+/* 
+-----------------------------------------------------------------------------
+ =MAIN POSITIONING STYLES
+----------------------------------------------------------------------------- */
+html, body{ }
+/* Sticky: html, body{ height: 100%; } */
+html{ background: url(../images/common/bg.jpg) center top repeat; }
+body { text-align: center; }
+/* Sticky: body > #container { height: auto; min-height: 100%; } */
+#container{	 }
+#inner-container,
+#footer {
+	height: 100%;
+	width: 976px;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+	}
+#inner-container{
+	 background: url(../images/common/content.png) center top repeat-y; }
+#content {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	padding: 0 4px;
+	background: url(../images/common/content_top.jpg) center 7px no-repeat; 
+	}
+	
+#news_and_initiatives #content {	background: url(../images/common/banner_news.jpg) center 7px no-repeat; }
+#publications #content {	background: url(../images/common/banner_pubs.jpg) center 7px no-repeat; }
+#seminars #content {	background: url(../images/common/banner_seminars.jpg) center 7px no-repeat; }
+
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/ 
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+	
+/* 
+-----------------------------------------------------------------------------
+ =HEADER
+----------------------------------------------------------------------------- */
+#header {
+	background: url(../images/common/header.gif) center top no-repeat;
+	padding: 0;
+	z-index: 100;
+	position: relative;
+	margin: 0 auto;
+	width: 976px;
+		height: 173px;
+	}
+	#masthead { 
+		position: relative;
+		padding: 0;
+		display: block;
+		}
+	#masthead div { }
+		#masthead div a {
+			display: block;
+			height: 106px;
+			text-decoration: none;
+			text-indent: -3000px;
+			width: 331px;
+			}
+	#masthead address {
+		}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =CONTENT
+----------------------------------------------------------------------------- */
+
+#primary-content,
+#secondary-content,
+#tertiary-content{ 
+	float: left; 
+	position: relative;
+	min-height: 470px;
+	padding-bottom: 20px;
+	display: inline; /* blast you IE6 */
+	z-index: 30; /* if you change this check the content editor in IE7 */
+	}
+#primary-content {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	margin-top: 130px;
+	}
+#secondary-content {
+	font-size: 1.2em;
+	line-height: 1.6em;
+	clear: right;
+	margin-left: 20px;
+	width: 347px;
+	margin-top: 160px;
+	}
+#tertiary-content{
+	display: none;
+	}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =FOOTER
+----------------------------------------------------------------------------- */
+#footer-container {
+	height: 144px;
+	padding-bottom: 20px;
+	position: relative;	
+	z-index: 10;
+	background: url(../images/common/footer.png) center top no-repeat;
+	}
+	#footer-container #footer {
+		width: 976px;
+		}
+		#footer address { 
+			color: #5c5d5c;
+			font-size: 12px;
+			vertical-align: bottom;
+			position: absolute;
+			left: 28px;
+			 top: 20px;
+			}
+		#contactinfo { width: 170px; text-align: right; font-size: 12px; color: #395e6a; padding: 18px 20px 0 0; margin-left: 777px;}
+		#contactinfo ul{ list-style: none;}
+		#contactinfo ul li.first-child{ padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1px solid #cbd3d8;}
+		#contactinfo ul li a{ font-weight: bold;}
+
+/* 
+-----------------------------------------------------------------------------
+ =STRUCTURE
+----------------------------------------------------------------------------- */
+
+/* One Column
+----------------------------------------------------------------------------- */
+body.layout-n0-p1-s0 #primary-content {
+	width: 820px;
+	margin-left: 70px;
+	}
+body.layout-n0-p1-s0 #tertiary-content,
+body.layout-n0-p1-s0 #secondary-content {
+	display: none;
+	}
+	
+
+/* Two Column A
+----------------------------------------------------------------------------- */
+body.layout-n1-p1-s0 #primary-content {
+	width: 640px;
+	width: 820px;
+	margin-left: 70px;
+	}
+body.layout-n1-p1-s0 #secondary-content {
+	display: none;
+	}
+body.layout-n1-p1-s0 #tertiary-content {
+	}
+
+
+/* Two Column B
+----------------------------------------------------------------------------- */
+body.layout-n0-p1-s1 #primary-content {
+	width: 550px;
+	margin-left: 26px;
+	}
+body.layout-n0-p1-s1 #tertiary-content {
+	display: none;
+	}
+body.layout-n0-p1-s1 #secondary-content {
+	}
+	
+
+/* Two Column C (custom)
+----------------------------------------------------------------------------- */
+body.layout-n1-p1-s0-c #primary-content {
+	width: 640px;
+	}
+body.layout-n1-p1-s0-c #secondary-content {
+	display: none;
+	}
+body.layout-n1-p1-s0-c #tertiary-content {
+	}
+body.layout-n1-p1-s0-c .float-container{ }
+
+	
+/* Three Column
+----------------------------------------------------------------------------- */
+body.layout-n1-p1-s1 #primary-content {
+	width: 550px;
+	margin-left: 26px;
+	}
+body.layout-n1-p1-s1 #secondary-content {
+	}
+body.layout-n1-p1-s1 #tertiary-content {
+	}
+
+	
+/* Split PC View
+----------------------------------------------------------------------------- */
+div.columns {
+	}
+div.columns:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+div.columns div.col1 {
+	margin-right: 3%; 
+	}
+div.columns div.col1, 
+div.columns div.col2 {
+	float: left;
+	width: 47%;
+	}
+
+/* Float Container (unique special treatment)
+----------------------------------------------------------------------------- */
+.float-container{ 
+	width: 220px;
+	}
+	
+/* No Script Message
+----------------------------------------------------------------------------- */
+#noscriptmessage {
+	left: 0;
+	padding: 2px 0;
+	background: #f9f9f9;
+	z-index: 200;
+	width: 100%;
+	color: #000;
+	font-size: 1.1em;
+	text-align: center;
+	opacity: 0.8;
+	-moz-opacity: 80%;
+	filter: alpha(opacity=80);
+	}
+
+	#noscriptmessage a { color: #666; text-decoration: underline; }
+

@@ -1,0 +1,495 @@
+/* VERSIONS
+/* 4_5: Initial css version, with most recent production improvements
+/* 4_6: Added base styles to main calendar view and block view, and added portal calendar styles
+/* 4_7: Re-organized the css, added missing elements, and cleaned up defaults [Author: Landon Durnan]
+/* 5_0: Standardized tables (mini-block, month, week), updated detail, fixed customize, better defaults [Author: Landon Durnan]
+
+/* CALENDAR STYLES
+----------------------------------------------------------------------------- */
+
+/* 
+-----------------------------------------------------------------------------
+ =GENERAL CALENDAR STYLES
+----------------------------------------------------------------------------- */
+
+dl.calendar-day dd span.time,
+dl.calendar-day dd span.thru,
+dl.calendar-day dd span.location,
+dl.calendar-day dd span.url, 
+dl.calendar-day dd span.readmore{
+	display: block;
+	margin: 0;
+	padding: 0;
+	}
+	dl.calendar-day dd span.time em,
+	dl.calendar-day dd span.thru em,
+	dl.calendar-day dd span.location em{
+		font-style: normal;
+		}
+
+/* 
+-----------------------------------------------------------------------------
+ =BUTTONS
+----------------------------------------------------------------------------- */	
+.calendar-prevnext { display: inline; }
+	.calendar-prevnext a.prev,
+	.calendar-prevnext a.prev-day  {
+		float: left;
+		}	
+	.calendar-prevnext a.next,
+	.calendar-prevnext a.next-day {
+		float: right;
+		}
+
+.calendar-customize { display: inline;}
+
+.calendar-views { display: inline;}
+	.calendar-views span.view-label {}
+	.calendar-views a {}
+		.calendar-views a.view-list {}
+		.calendar-views a.view-month {}	
+		.calendar-views a.view-week {}
+		.calendar-views a.view-oneweek {}
+		.calendar-views a.view-twoweek {}
+		.calendar-views a.view-print {}
+
+/* 
+-----------------------------------------------------------------------------
+ =CALENDAR-LIST
+----------------------------------------------------------------------------- */
+.calendar-list{}
+	.calendar-list dl.calendar-day {
+		clear: both; 
+		float: none; 
+		margin-bottom: .5em;	 
+		min-height: 30px;
+		}
+	.calendar-list dl.calendar-day:after {
+		content: "."; 
+		display: block; 
+		height: 0; 
+		clear: both; 
+		visibility: hidden;
+		}
+		.calendar-list dl.calendar-day dt {
+			width: 53px;
+			height: 30px;
+			display: block;
+			float: left;
+			position: relative;
+			padding: 0;
+			margin: 0; 
+			}
+			.calendar-list dl.calendar-day dt span {
+				color: #999;
+				display: block; 
+				text-align: center; 
+				text-transform: uppercase;
+				font-family: Tahoma, Arial, Helvetica, sans-serif;
+				font-size: 90%;
+				position: absolute;
+				top: 0;
+				line-height: normal;
+				width: 25px;
+				}
+			.calendar-list dl.calendar-day dt span.day {
+				top: 2px;
+				}
+			.calendar-list dl.calendar-day dt span.month {
+				top: 1.2em;
+				}
+			.calendar-list dl.calendar-day dt span.date {
+				font-size: 210%;
+				top: -1px;
+				right: 0;
+				}
+		.calendar-list dl.calendar-day dd {
+			margin: 0 0 0.4em 65px; 
+			padding: 0.4em 0 0.4em 0; 
+			border-bottom: 1px solid #999;
+			}
+		.calendar-list dl.calendar-day dd.only-child {
+			margin-bottom: 0;
+			}
+		.calendar-list dl.calendar-day dd.last-child {
+			margin-bottom: 0;
+			}
+		.calendar-list dl.calendar-day dd * {
+			margin: 0;
+			font-weight: normal;
+			}
+			.calendar-list dl.calendar-day dd h4,
+			.calendar-list dl.calendar-day dd h5,
+			.calendar-list dl.calendar-day dd h6 {
+				line-height: normal;
+				display: block;
+				}
+			.calendar-list dl.calendar-day dd h4 span, /* Category */ 
+			.calendar-list dl.calendar-day dd h5,
+			.calendar-list dl.calendar-day dd h6 {
+				font-weight: normal;
+				font-size: 95%;
+				}
+	.calendar-list a.edit {
+		}	
+	
+	
+/* 
+-----------------------------------------------------------------------------
+ =DETAIL
+----------------------------------------------------------------------------- */
+.calendar-detail { }
+/*	.calendar-detail h1 { }
+	.calendar-detail h2 { }*/
+	.calendar-detail h3 { } /* Title */
+		.calendar-detail h3 .athletic-location {}
+		.calendar-detail h3 .category{}
+		.calendar-detail h3 .contesttype{}
+	.calendar-detail h4{}
+	.calendar-detail h4.date{} 
+	.calendar-detail h4.result{}
+	.calendar-detail h4.submodule{ font-weight: normal; }
+	.calendar-detail h5{ font-weight: normal; }
+		.calendar-detail h5 span{}
+	.calendar-detail h5.time{}
+	.calendar-detail h5.location{}
+	.calendar-detail h5.dismissal{}
+	.calendar-detail h5.return{}
+	.calendar-detail h5.transportation{}
+	.calendar-detail p.memo{ margin-top: 1em; }
+	.calendar-detail a.url{}
+	.calendar-detail dl.directions{}
+		.calendar-detail dl.directions dt{}
+		.calendar-detail dl.directions dd{}
+			.calendar-detail dl.directions dd address{}
+			.calendar-detail dl.directions dd .directions-container{}
+				.calendar-detail dl.directions dd .directions-container .travel-time{}
+	.calendar-detail a.back{}
+	
+/* 
+-----------------------------------------------------------------------------
+ =CALENDAR-TABLES Mini-block, Block, Week
+ 
+ Available Classes:
+ table.month#
+ table th.first-child / last-child
+ table tr.first-child / last-child / week#
+ table td.first-child / last-child / other-month / other-month-day# / day# / today
+ table dl dd.first-child / last-child / only-child / alt
+ 
+ Colors:
+ Table Borders: #CCC
+ Table Heading: #999
+ Table TD: #FFF
+ Other Month TD: #EFEFEF
+ Today: #DFDFDF
+ Event: #E4DED2
+ DT: #E1E1E1
+----------------------------------------------------------------------------- */
+.table-container{ margin-bottom: .75em }
+	.table-container table {
+		border-collapse: collapse;
+		border: 1px solid #CCC;  
+		border-right: 0;
+		width: 100%;
+		}
+		.table-container table th{
+			background-color: #999;
+			border-bottom: 1px solid #CCC; 
+			border-right: 1px solid #CCC;
+			color: #FEFFFF; 
+			font-weight: normal;
+			text-align: center;
+			}
+		.table-container table tr{
+			}
+		.table-container table td{
+			background-color: #FFF;
+			border: 1px solid #CCC; 
+			border-left: 0;
+			vertical-align: top;
+			width: 12%;
+			}
+		.table-container table td.first-child{
+			}
+		.table-container table td.last-child{
+			}
+		.table-container table td.other-month{
+			background-color: #EFEFEF;
+			}
+		.table-container table td.today{
+			}
+		.table-container table td.event{
+			}
+			.table-container table td span{ /* other month */
+				}
+			.table-container table td a{
+				}
+			.table-container table td.today a{
+				}
+			.table-container table td.event a{
+				}
+		.table-container table td dl.calendar-day{
+			}
+			.table-container table td dl.calendar-day dt{
+				}
+			.table-container table td.other-month dl.calendar-day dt{
+				background-color: #E1E1E1;
+				}
+			.table-container table td dl.calendar-day dd{
+				margin-bottom: 0.8em;
+				}
+				.table-container table td dl.calendar-day dd h4,
+				.table-container table td dl.calendar-day dd h5{
+					display: block;
+					line-height: normal;
+					margin: 0;
+					}
+				.table-container table td dl.calendar-day dd h4{
+					}
+				.table-container table td dl.calendar-day dd h5{
+					font-weight: normal;
+					}
+					.table-container table td dl.calendar-day dd span.time em, /* time/location labels for month/week/print views */
+					.table-container table td dl.calendar-day dd span.location em{
+						display: none;
+						}
+
+/* 
+-----------------------------------------------------------------------------
+ =CALENDAR-MINI
+----------------------------------------------------------------------------- */
+.calendar-mini {
+    margin-bottom: 1.8em;
+	}
+	.calendar-mini h2 { 
+		margin-top: 0; 
+		padding-top: 0; 
+		}
+	.calendar-mini form select {
+		position: relative;
+		margin: 0 0px 6px 6px;
+		font-size: .92em;
+		width: 158px;
+		}
+	.calendar-mini table {
+		}
+		.calendar-mini table th{
+			}
+		.calendar-mini table tr{}
+		.calendar-mini table td{
+			text-align: center;
+			}
+		.calendar-mini table td.first-child{}
+		.calendar-mini table td.last-child{}
+		.calendar-mini table td.other-month{}
+		.calendar-mini table td.today {
+		    background-color: #DFDFDF; 
+		    }
+		.calendar-mini table td.event{
+			background-color: #E4DED2;
+			}
+			.calendar-mini table td span{}
+			.calendar-mini table td a{
+				text-decoration: none;
+				}
+			.calendar-mini table td.today a{}
+			.calendar-mini table td.event a{}
+		.calendar-mini table td dl.calendar-day{}
+			.calendar-mini table td dl.calendar-day dt{}
+			.calendar-mini table td dl.calendar-day dd{}
+				.calendar-mini table td dl.calendar-day dd h4{}
+				.calendar-mini table td dl.calendar-day dd h5{}
+				
+	.calendar-mini .calendar-prevnext {
+		float: none; 
+		clear: both; 
+		padding: 0 0 10px 0; 
+		}
+		.calendar-mini .calendar-prevnext a {
+			display: block;
+			/* text-indent: -3000px; 
+			text-decoration: none;
+			background-color: transparent;
+			padding: 0;
+			border: 0; */
+			}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =CUSTOMIZE
+----------------------------------------------------------------------------- */
+.calendar-customize {}
+
+form#customize  { margin: 0;}
+	form#customize.active {
+		width: 180px;
+		padding: 8px;
+		border: 2px solid #CCC;
+		background-color: #FFF;
+		position: absolute;
+		top: 60px;
+		left: 0px;
+		display: block;
+		}
+	.calendar-customize h3 { margin: 0; line-height: normal; }
+	.calendar-customize ul.calendar-formlist {
+		margin: 0 0 10px 0;
+		padding: 0;
+		list-style: none;
+		list-style-image: none; 
+		}
+		.calendar-customize ul.calendar-formlist li {
+			margin: 0 0 5px 0;
+			padding: 0;
+			background: none;
+			}
+			
+	.calendar-customize .check-links{ margin: 0 0 6px 0; }
+		.calendar-customize .check-links a{ text-decoration: none;}
+		.calendar-customize .check-links a:hover{ }
+		.calendar-customize .check-links .check{ 
+			background: url(../../images/common/checkall.gif) 0 3px no-repeat; 
+			padding-left: 12px; 
+			margin-right: 10px;
+			}
+		.calendar-customize .check-links .uncheck{ 
+			background: url(../../images/common/uncheckall.gif) 0 3px no-repeat; 
+			padding-left: 12px; 
+			}
+
+/* 
+-----------------------------------------------------------------------------
+ =KEY
+----------------------------------------------------------------------------- */
+dl.key { display: none; }
+	dl.key dt { font-weight: bold; }
+	dl.key ul { list-style: none; list-style-image: none;  }
+		dl.key ul li { padding-left: 0; background: none; }
+			dl.key ul li span{ width: 20px; height: 20px; display: block; float: left; margin: -2px 8px 0 0;}
+			dl.key ul li.noevent span{ background-color: #E9F7FF; }
+			dl.key ul li.today span{ background-color: #8DD3FF; }
+			dl.key ul li.event span{ background-color: #CAE9FC; }
+
+/* 
+-----------------------------------------------------------------------------
+ =WIDGET BUTTONS
+----------------------------------------------------------------------------- */
+.calendar-widgets{ position: relative; margin-bottom: .5em;}
+	.calendar-widgets a{ position: relative; } /* this fixes a display issue in IE */
+
+	.calendar-widgets .calendar-customize{ margin-right: 3em; }
+
+	.calendar-widgets .calendar-prevnext{ position: absolute; right: 0;}
+		.calendar-widgets .calendar-prevnext a.prev, 
+		.calendar-widgets .calendar-prevnext a.next{ float: none; }
+
+/* 
+-----------------------------------------------------------------------------
+ =MONTH/WEEK CALENDAR
+----------------------------------------------------------------------------- */
+.calendar-month{ margin-bottom: .75em }
+	.calendar-month .month-select{ 
+		position: absolute; 
+		top: 0;
+		right: 0;
+		}
+		.calendar-month .month-select select{ width: 160px; }
+	.calendar-month table {
+		width: 100%;
+		}
+		.calendar-month table th{
+			padding: 0.4em;
+			text-align: left;
+			}
+		.calendar-month table tr{}
+		.calendar-month table td{
+			width: 16%;
+			}
+		.calendar-month table td.first-child{}
+		.calendar-month table td.last-child{}
+		.calendar-month table td.other-month{}
+		.calendar-month table td.today{}
+		.calendar-month table td.event{}
+			.calendar-month table td span{}
+			.calendar-month table td a{}
+			.calendar-month table td.today a{}
+			.calendar-month table td.event a{}
+		.calendar-month table td dl.calendar-day{}
+			.calendar-month table td dl.calendar-day dt{
+				font-weight: bold;
+				padding: 0.4em;
+				margin-bottom: 0.6em;
+				}
+		    .calendar-month table td.today dl.calendar-day dt{
+    		    background-color: #DFDFDF; 
+		        }
+			.calendar-month table td dl.calendar-day dd{
+				padding: 0 0.4em;
+				}
+				.calendar-month table td dl.calendar-day dd h4{}
+				.calendar-month table td dl.calendar-day dd h5{}
+	
+
+/* PORTAL CALENDAR STYLES
+*******************************************************************************
+
+PORTAL CALENDAR EVENT LIST
+----------------------------------------------------------------------------- */
+.portal-calendar-list dl.calendar-day dt {
+	font-weight: bold;
+	background-color: #EEE;
+	border-bottom: 1px solid #CCC;
+	padding: 0.4em;
+	margin-bottom: 0.6em;
+	}
+.portal-calendar-list dl.calendar-day dd {
+	margin-bottom: 0.6em;
+	}
+.portal-calendar-list dl.calendar-day dd * {
+	margin: 0;
+	font-size: 1em;
+	font-weight: normal;
+	}
+.portal-calendar-list dl.calendar-day dd h5,
+.portal-calendar-list dl.calendar-day dd h6 {
+	font-size: 1em;
+	display: inline;
+	padding-right: 0.4em;
+	}
+.portal-calendar-list dl.calendar-day dd h4 span, /* Category */ 
+.portal-calendar-list dl.calendar-day dd h5,
+.portal-calendar-list dl.calendar-day dd h6 {
+	font-weight: normal;
+	font-size: 0.91em;
+	color: #666;
+	}
+.portal-calendar-list dl.calendar-day dd .readmore {
+	}
+.portal-calendar-list a.edit {
+	}	
+	
+/* CLASS WEEK CALENDAR
+----------------------------------------------------------------------------- */
+#above-content .calendar-block-week {
+	margin: 0;
+	padding: 10px 0 0 0;
+	}
+#above-content .calendar-block-week .calendar-widgets {
+	padding: 0;
+	margin: 0;
+	}
+#above-content .calendar-block-week .calendar-widgets h2 {
+	font-size: 1.08em;
+	color: #4D417F;
+	margin: 0;
+	padding: 0;
+	}
+#above-content .calendar-block-week .calendar-widgets a {
+	margin-right: 5px;
+	}
+#above-content .calendar-block-week .table-container {
+	margin: 5px 0 0 0;
+	padding: 0;
+	}

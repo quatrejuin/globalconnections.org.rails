@@ -1,0 +1,21 @@
+﻿/* Shared Directory CSS 
+----------------------------------------------------------------------------- */
+/* General */
+.directory dl.address span.type { display: block; }
+.directory dl.address span.type:after { content: ":"; }
+
+/* List */
+.directory .list ul.search-query{ list-style: disc; margin: 0 0 1em 1.25em;}
+.directory .list ul.search-query li{ margin: 0; padding: 0; border: 0; }
+
+/* Profile */
+.directory .profile div.thumb{ float: right; }
+.directory .profile dl{ margin-bottom: 1.5em;}
+.directory .profile dl dt{ font-weight: bold; }
+
+/* Birthday */
+.birthday .list ul li{ border: 0; }
+.birthday .list ul li p{ margin-bottom: 0; }
+
+/* Recent Logins */
+.recent-logins .list ul li{ border: 0; margin: 0; padding: 0; }
