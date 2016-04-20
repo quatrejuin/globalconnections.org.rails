@@ -1,61 +1,72 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
-    <head id="ctl00_Head1"><meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-<title>
-	Global Connections
-</title>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= csrf_meta_tags %>
+<head id="ctl00_Head1"><meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title>
+    Global Connections
+  </title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
-<meta name="keywords" content=" " />
-<meta name="description" content=" " />
+  <meta name="keywords" content=" " />
+  <meta name="description" content=" " />
 
-<!-- SCRIPTING -->
-<script type="text/javascript" language="JavaScript" src="js/ss_urchin-c.js"></script>
-<script type="text/javascript" language="JavaScript" src="js/si_behaviors-c.js"></script>
-<script type="text/javascript" language="JavaScript" src="js/si_onload.js"></script>
-<script type="text/javascript" language="JavaScript" src="_infrastructure/JavaScript/jQuery.js"></script>
-<script type="text/javascript" language="JavaScript" src="_infrastructure/JavaScript/sifr.js"></script>
-<script type="text/javascript" language="JavaScript" src="js/jquery_onload.js"></script>
-<script type="text/javascript" language="JavaScript" src="js/sifr-config.js"></script>
+  <!-- SCRIPTING -->
+  <script type="text/javascript" language="JavaScript" src="js/ss_urchin-c.js"></script>
+  <script type="text/javascript" language="JavaScript" src="js/si_behaviors-c.js"></script>
+  <script type="text/javascript" language="JavaScript" src="js/si_onload.js"></script>
+  <script type="text/javascript" language="JavaScript" src="_infrastructure/JavaScript/jQuery.js"></script>
+  <script type="text/javascript" language="JavaScript" src="_infrastructure/JavaScript/sifr.js"></script>
+  <script type="text/javascript" language="JavaScript" src="js/jquery_onload.js"></script>
+  <script type="text/javascript" language="JavaScript" src="js/sifr-config.js"></script>
 
-<!-- STYLES -->
-<link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
-<link href="css/base.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/sifr.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/module/news.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/module/calendar.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/module/gallery.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/module/academics.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/module/athletics.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/module/directory.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/module/notes.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/module/resource.css" rel="stylesheet" type="text/css" media="screen" />
+  <!-- STYLES -->
+  <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+  <link href="css/base.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/sifr.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/module/news.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/module/calendar.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/module/gallery.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/module/academics.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/module/athletics.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/module/directory.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/module/notes.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/module/resource.css" rel="stylesheet" type="text/css" media="screen" />
 
-<style type="text/css" media="screen">
-/* <![CDATA[ */
-/*\*//*/@import "/css/filter/iemac.css";/**/
-/* ]]> */
-</style>
-<!--[if lt IE 7]><link href="/css/filter/iepc.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
-<!--[if IE 7]><link href="/css/filter/ie7.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
-<!-- / STYLES -->
+  <style type="text/css" media="screen">
+  /* <![CDATA[ */
+  /*\*//*/@import "/css/filter/iemac.css";/**/
+  /* ]]> */
+  </style>
+  <!--[if lt IE 7]><link href="/css/filter/iepc.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link href="/css/filter/ie7.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+  <!-- / STYLES -->
 
-<!--To Load the Header and Footer-->
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script>
-$(function(){
-  $("#gcheader").load("header.html");
-  $("#gcfooter").load("footer.html");
-});
-</script>
+</head>
 
-	</head>
+
+
 <body class="tier-1 layout-n0-p1-s1" id=<%= action_name %>>
+<%= render 'header'%>
+
 
 <%= yield %>
+
+
+<script type="text/javascript" language="JavaScript">
+	// <![CDATA[
+	// An array of links should keep their https
+	var SI_skipHTTPS = new Array(
+		'/Alumni/$', // $ all links are de-https'd with this path /Alumni/
+		'/Alumni/index.aspx'
+		);
+	SI_deHTTPSLinks();
+	// ]]>
+</script>
+
+
+<%= render 'footer'%>
 
 </body>
 </html>
