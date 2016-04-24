@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 
   get 'publications' => 'static_pages#publications'
 
-  get 'seminars' => 'static_pages#seminars'
+  #get 'seminars' => 'static_pages#seminars'
+
+  resources :news_and_initiatives
+  resources :seminars
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
