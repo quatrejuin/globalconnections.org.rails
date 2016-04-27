@@ -1,2 +1,17 @@
-<h1>Seminars#new</h1>
-<p>Find me in app/views/seminars/new.html.erb</p>
+<h1>Add Seminar</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @post,url: {:controller => 'seminars', :action => 'create'} do |f| %>
+      <%= render 'error_messages', object: f.object %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content, class: 'form-control' %>
+
+      <%= f.submit "Add Seminar", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
