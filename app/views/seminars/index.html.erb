@@ -1,2 +1,26 @@
-<h1>Seminars#index</h1>
-<p>Find me in app/views/seminars/index.html.erb</p>
+<h1>Listing Seminars</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Summary</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @seminars.each do |seminar| %>
+  <tr>
+    <td><%= seminar.title %></td>
+    <td><%= seminar.content %></td>
+    <%# "seminar" below will call a post_path method in helper eqauls to seminar_path(seminar.id)%>
+    <td><%= link_to "Show", seminar %></td>  
+    <td><%= link_to "Edit", edit_seminar_path(seminar) %></td>
+    <td><%= link_to "Remove", seminar, method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to "New seminar", new_seminar_path %>
