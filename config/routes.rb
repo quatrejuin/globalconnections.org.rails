@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'publications' => 'static_pages#publications'
 
-  #get 'seminars' => 'static_pages#seminars'
+  get 'seminars' => 'static_pages#seminars'
 
   resources :news_and_initiatives
   resources :seminars

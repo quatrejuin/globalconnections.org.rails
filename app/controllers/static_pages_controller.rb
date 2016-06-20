@@ -12,5 +12,6 @@ class StaticPagesController < ApplicationController
   end
 
   def seminars
+    @seminars = Post.all
   end
 end

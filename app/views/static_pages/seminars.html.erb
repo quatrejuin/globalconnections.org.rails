@@ -73,103 +73,15 @@
 
 	  </dl>
       <h3>Global Connections Seminars</h3>
-      <table>
-
-						<tr>
-							<td>GC I</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>South Africa & Botswana, 1997</td>
-						</tr>
-						<tr class="alt">
-							<td> GC II</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Australia, Victoria and New South Wales, 1998</td>
-						</tr>
-                        <tr>
-							<td>GC  III</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Crowthorne, United Kingdom, 1999</td>
-						</tr>
-						<tr class="alt">
-							<td> GC IV</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Massachusetts, United States of America, 2000</td>
-						</tr>
-                        <tr>
-							<td> GC V</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Kenya, Africa, 2001</td>
-						</tr>
-						<tr class="alt">
-							<td> GC VI</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>China, 2002</td>
-						</tr>
-                        <tr>
-							<td> GC VII</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>France, 2003</td>
-						</tr>
-						<tr class="alt">
-							<td> GC VIII </td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Bulgaria and Romania, 2004</td>
-						</tr>
-                        <tr>
-							<td> GC IX</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Guatemala, 2005</td>
-						</tr>
-						<tr class="alt">
-							<td> GC X</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Connecticut, United States of America, 2007</td>
-						</tr>
-						<tr>
-							<td> GC XI</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Chiang Mai, Thailand, 2008</td>
-						</tr>
-                        <tr class="alt">
-							<td> GC XII</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Amman, Jordan, 2010</td>
-						</tr>
-						<tr>
-							<td>GC XIII</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>South Africa & Botswana, 2011</td>
-						</tr>
-                        <tr>
-							<td>GC XIV</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>New Zealand, 2012</td>
-						</tr>
-                        <tr class="last-child">
-							<td>GC XV</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>Colombia, 2013</td>
-						</tr>
-					</table>
+          <table>
+            <% @seminars.each do |seminar| %>
+              <tr>
+                <td>GC <%= seminar.order %></td><td>&nbsp;</td><td><%= link_to seminar.title, seminar%></td>
+              </tr>
+            <% end %>
+          </table>
                     <br />
       <h4><u><a href="../about/evolution.aspx.html">Click here</a></u> to see the evolution of The Global Connections Seminars.</h4>
-
-
             </div>
         </div> <!--closing content-->
         </div>

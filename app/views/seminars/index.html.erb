@@ -11,10 +11,10 @@
 
 <% @seminars.each do |seminar| %>
   <tr>
-    <td><%= seminar.title %></td>
+    <td><%= link_to seminar.title, seminar%></td>
     <td><%= seminar.content %></td>
     <%# "seminar" below will call a post_path method in helper eqauls to seminar_path(seminar.id)%>
-    <td><%= link_to "Show", seminar %></td>  
+    <td><%= link_to "Show", seminar %></td>
     <td><%= link_to "Edit", edit_seminar_path(seminar) %></td>
     <td><%= link_to "Remove", seminar, method: :delete, data: { confirm: "Are you sure?" } %></td>
   </tr>

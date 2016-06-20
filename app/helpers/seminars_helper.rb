@@ -3,7 +3,7 @@ module SeminarsHelper
     seminar_path(seminar)
   end
 
-  # poats_path will be used in new.html.erb by form_for
+  # poats_path will be used in views/seminars/new.html.erb by form_for
   def posts_path
     seminars_path
   end
