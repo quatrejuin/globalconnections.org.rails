@@ -1,14 +1,34 @@
-<div class="col-md-6 col-md-offset-6">
-  <h1>
-    <%= @seminar.title %>
-  </h1>
-  <div>
-    <%= @seminar.content %>
-  </div>
-  <div>
-    <%= @seminar.order %>
-  </div>
-  <div>
-    <%= link_to "Seminar List", seminars_path %>
-  </div>
-</div>
+
+  <div id="gcheader"></div>
+    <div id="container">
+        <div id="inner-container">
+
+          <!-- header -->
+          <div id="header">
+            <div id="masthead">
+              <div><%= link_to "Global Connections",root_path %></div>
+            </div>
+
+            <!-- navigation menu -->
+            <%= render 'navigation' %>
+			</div>
+			<!-- //header -->
+			<!-- page content -->
+			<div id="content" class="content clearfix">
+				<div class="hidden"><p><a href="GCSeminarXVII.aspx.html#primary-content">Skip to Page Content</a></p></div>
+				<div id="tertiary-content" class="tc">
+
+					<div id="nav-sub" class="nav">
+
+
+                    </div>
+				</div>
+
+
+            <div id="primary-content" class="pc">
+
+            <%= raw(@seminar.content) %>
+
+        </div> <!--closing content-->
+        </div>
+    </div>
