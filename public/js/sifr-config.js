@@ -22,27 +22,27 @@ var TradeGothicRegular = { src: '/_infrastructure/fonts/TradeGothicRegular.swf' 
 // sIFR.useStyleCheck = true;
 
 // Next, activate sIFR:
-sIFR.activate(TradeGothicRegular);
+// sIFR.activate(TradeGothicRegular);
 
 // If you want, you can use multiple movies, like so:
 //
 //    var futura = { src: '/path/to/futura.swf' };
 //    var garamond = { src '/path/to/garamond.swf' };
 //    var rockwell = { src: '/path/to/rockwell.swf' };
-//    
+//
 //    sIFR.activate(futura, garamond, rockwell);
 //
 // Remember, there must be *only one* 'sIFR.activate()'!
 
 // Now we can do the replacements. You can do as many as you like, but just
 // as an example, we'll replace all '<h1>' elements with the Futura movie.
-// 
+//
 // The first argument to 'sIFR.replace' is the 'futura' object we created earlier.
 // The second argument is another object, on which you can specify a number of
 // parameters or "keyword arguemnts". For the full list, see "Keyword arguments"
-// under 'replace(kwargs, mergeKwargs)' at 
+// under 'replace(kwargs, mergeKwargs)' at
 // <http://wiki.novemberborn.net/sifr3/JavaScript+Methods>.
-// 
+//
 // The first argument you see here is `selector`, which is a normal CSS selector.
 // That means you can also do things like '#content h1' or 'h1.title'.
 //
