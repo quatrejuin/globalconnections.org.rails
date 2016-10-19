@@ -14,7 +14,7 @@ class SeminarsController < ApplicationController
   end
 
   def create
-    @seminar = Post.new(params[:post].permit(:title,:content))
+    @seminar = Post.new(params[:post].permit(:title,:content,:order))
     if @seminar.save
       redirect_to action: "new"
     else
@@ -28,7 +28,7 @@ class SeminarsController < ApplicationController
 
   def update
     @seminar = Post.find(params[:id])
-    if @seminar.update_attributes(params[:post].permit(:title,:content))
+    if @seminar.update_attributes(params[:post].permit(:title,:content,:order))
       flash[:success] = "Seminar updated"
       redirect_to @seminar
     else

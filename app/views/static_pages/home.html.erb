@@ -50,20 +50,14 @@
         	<h2>Global Connections Foundation News</h2>
             <div class="news-list">
            		<ul class="news">
-                 <li>
-                       <h4>Global Connections Seminar XVII, January 12-19, 2016</h4>
-                   <p>Peace Education within Faith Diversity      &nbsp;&nbsp;&nbsp;<a class="readmore" href="news_and_initiatives/GCSeminarXVII.aspx.html"><strong>More</strong></a> </p>
-                 </li>
-                  <li>
-                        <h4>Global Connections Seminar XVI, June 21-30, 2014</h4>
-                    <p>Peace Education: Great Teaching: Educators for Peace      &nbsp;&nbsp;&nbsp;<a class="readmore" href="news_and_initiatives/GCSeminarXVI.aspx.html"><strong>More</strong></a> </p>
-                  </li>
-                   <li>
-                     <h4>Thoughts about Global Connections XVI</h4>
-                    <p>See <a class="readmore" href="news_and_initiatives/GCSeminarXVI_thoughts.aspx.html"><strong>More</strong></a>                                        </li>
-
+                <% @seminars.sort{|a, b| b.order <=> a.order}.each do |seminar| %>
+                <li>
+                  <h4><%= link_to seminar.title, seminar%></h4>
+                  <br />
+                </li>
+                <% end %>
                 </ul>
-                <span class="viewall"><a href="news_and_initiatives/index.aspx.html">Recent News</a></span>
+                <span class="viewall"><%= link_to "Recent News", news_and_initiatives_path %></span>
             </div>
         </div>
 

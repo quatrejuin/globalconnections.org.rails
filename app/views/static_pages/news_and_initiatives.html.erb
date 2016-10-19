@@ -33,31 +33,13 @@
 
          <div class="news-list">
            		<ul class="news">
-                <li>
-                  <a class="readmore" href="news_and_initiatives/GCSeminarXVIII.aspx.html"><h4>Global Connections Seminar XVIII, March 17-25, 2017 </h4></a>
-                  <br />
-                  <br />
-                </li>
 
-                 <li>
-                     <a class="readmore" href="news_and_initiatives/GCSeminarXVII.aspx.html"><h4>Global Connections Seminar XVII, January 12-19, 2016 </h4></a>
-               <br />
-               <br />
-                </li>
-                    <li>
-                        <h4>Global Connections Seminar XVI, June 21-30, 2014                        </h4>
-                        <p>See the <a href="../documents/GC-Program-vMay22.pdf" target="_new">itinerary for the seminar</a>, and download the <a href="../documents/GCXVI-Information-Sheet.pdf" target="_new">information sheet</a>. </p>
-                        <br />
-<br />
-                  <a class="readmore" href="GCSeminarXVI.aspx.html">More about the seminar</a> <br />
+                <% @seminars.sort{|a, b| b.order <=> a.order}.each do |seminar| %>
+                <li>
+                  <h4><%= link_to seminar.title, seminar%></h4>
                   <br />
-                  </li>
-                    <li>
-                    <h4>Global Connections Seminar XV</h4>
-                    <p>Thanks, and GC Seminar XV Declaration<br />
-                      <br />
-<a class="readmore" href="GCSeminarXV_thoughts.aspx.html"> <strong>More</strong></a>
-                    </li>
+                </li>
+                <% end %>
                 </ul>
             </div>
 

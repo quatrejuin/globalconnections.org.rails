@@ -74,7 +74,7 @@
 	  </dl>
       <h3>Global Connections Seminars</h3>
           <table>
-            <% @seminars.each do |seminar| %>
+            <% @seminars.sort {|a,b| b.order <=> a.order}.each do |seminar| %>
               <tr>
                 <td>GC <%= seminar.order %></td><td>&nbsp;</td><td><%= link_to seminar.title, seminar%></td>
               </tr>
